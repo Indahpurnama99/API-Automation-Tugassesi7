@@ -1,0 +1,217 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-15T16:37:36.051Z",
+    "end": "2025-10-15T16:37:37.876Z",
+    "duration": 1825,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9824965a-54c9-49c1-8550-666788fcf09b",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2551d593-4a0c-44f5-9516-9f6d8053c603",
+          "title": "Create User",
+          "fullFile": "C:\\Users\\INDAH PURNAMA SARI\\API-Automation-Tugassesi7\\tests\\createUser.test.js",
+          "file": "\\tests\\createUser.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST Create User",
+              "fullTitle": "Create User POST Create User",
+              "timedOut": false,
+              "duration": 990,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users\", {\n  method: \"POST\",\n  headers: {\n    \"x-api-key\": \"reqres-free-v1\",\n    \"Content-Type\": \"application/json\",\n  },\n  body: JSON.stringify({\n    name: \"Indah\",\n    job: \"QA Tester\",\n  }),\n});\nconst data = await response.json();\nconsole.log(data);\nexpect(response.status).to.equal(201);\nexpect(data.name).to.equal(\"Indah\");\nexpect(data.job).to.equal(\"QA Tester\");",
+              "err": {},
+              "uuid": "d16c7e49-13cd-4c40-aecf-7ce40a79e7ce",
+              "parentUUID": "2551d593-4a0c-44f5-9516-9f6d8053c603",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d16c7e49-13cd-4c40-aecf-7ce40a79e7ce"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 990,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "3e5fb3dc-5268-4165-b2d0-4cf8eb89cfc8",
+          "title": "Delete User",
+          "fullFile": "C:\\Users\\INDAH PURNAMA SARI\\API-Automation-Tugassesi7\\tests\\deleteUser.test.js",
+          "file": "\\tests\\deleteUser.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "DELETE User",
+              "fullTitle": "Delete User DELETE User",
+              "timedOut": false,
+              "duration": 234,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\", {\n  method: \"DELETE\",\n  headers: {\n    \"x-api-key\": \"reqres-free-v1\",\n    \"Content-Type\": \"application/json\",\n  },\n});\nconsole.log(\"Status DELETE:\", response.status);\nexpect(response.status).to.equal(204);",
+              "err": {},
+              "uuid": "2fc01b37-f85b-4206-a072-ce1e8c71a5f7",
+              "parentUUID": "3e5fb3dc-5268-4165-b2d0-4cf8eb89cfc8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2fc01b37-f85b-4206-a072-ce1e8c71a5f7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 234,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "3b32ecce-97f4-45cf-91dd-b47253bf976a",
+          "title": "API Automation Reqres.in",
+          "fullFile": "C:\\Users\\INDAH PURNAMA SARI\\API-Automation-Tugassesi7\\tests\\getUser.test.js",
+          "file": "\\tests\\getUser.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get list User",
+              "fullTitle": "API Automation Reqres.in Get list User",
+              "timedOut": false,
+              "duration": 265,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users?page=2\");\nconst data = await response.json();\nconsole.log(data);\nassert.strictEqual(response.status, 200);\nassert.equal(data.data[0].id, \"7\");",
+              "err": {},
+              "uuid": "222998a9-bd9a-4b16-a620-de792b3167aa",
+              "parentUUID": "3b32ecce-97f4-45cf-91dd-b47253bf976a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "222998a9-bd9a-4b16-a620-de792b3167aa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 265,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c962796c-7ad9-43de-9cf0-95584f5d9fdf",
+          "title": "Update User",
+          "fullFile": "C:\\Users\\INDAH PURNAMA SARI\\API-Automation-Tugassesi7\\tests\\updateUser.test.js",
+          "file": "\\tests\\updateUser.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "PATCH Update User",
+              "fullTitle": "Update User PATCH Update User",
+              "timedOut": false,
+              "duration": 254,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\", {\n  method: \"PATCH\",\n  headers: {\n    \"x-api-key\": \"reqres-free-v1\",\n    \"Content-Type\": \"application/json\",\n  },\n  body: JSON.stringify({\n    name: \"Indah\",\n    job: \"QA Tester\",\n  }),\n});\nconst data = await response.json();\nconsole.log(\"Hasil PATCH:\", data);\nexpect(response.status).to.equal(200);\nexpect(data.job).to.equal(\"QA Tester\");",
+              "err": {},
+              "uuid": "5360e065-c44e-42b9-90ac-788b124c3307",
+              "parentUUID": "c962796c-7ad9-43de-9cf0-95584f5d9fdf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5360e065-c44e-42b9-90ac-788b124c3307"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 254,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.4"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.0"
+    }
+  }
+}
